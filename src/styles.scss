@@ -4,3 +4,11 @@
 @import '~bootstrap/scss/bootstrap';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media (max-width: 768px) {
+  .mat-icon {
+    font-size: 12px;
+    width: 12px !important;
+    height: 12px !important;
+  }
+}

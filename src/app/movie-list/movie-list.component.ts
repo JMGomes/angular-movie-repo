@@ -24,7 +24,7 @@ export class MovieListComponent {
 
   openRateDialog(movie: Movie) {
     const dialogRef = this.dialog.open(MovieRateDialogComponent, {
-      width: '500px',
+      maxWidth: '500px',
       data: {movie: movie},
     });
 
