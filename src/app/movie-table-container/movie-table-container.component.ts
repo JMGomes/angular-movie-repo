@@ -24,7 +24,8 @@ export class MovieTableContainerComponent implements OnInit {
 
   deleteMovieFromStore(m: Movie) {
     this.movieStore.removeMovie(m);
-    this._snackBar.open(`${m.name} Removed`);
+    this._snackBar.open(`${m.name} Removed`, undefined, {duration: 3000});
+
   }
 
   updateMovieRatingFromStore(movieRate: {movie: Movie; rate: number}) {

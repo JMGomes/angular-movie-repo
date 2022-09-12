@@ -50,7 +50,7 @@ export class MovieAddNewComponent {
       rate: 0
     }
     this.moviesStore.addMovie(movieToAdd);
-    this._snackBar.open(`${movieToAdd.name} Added`);
+    this._snackBar.open(`${movieToAdd.name} Added`, undefined, { duration: 2000});
     this.router.navigateByUrl('main');
   }
 }
