@@ -17,7 +17,7 @@ import {SearchTermFilterPipe} from "../pipes/SearchTermFilterPipe";
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
 import { MovieRateDialogComponent } from './movie-rate-dialog/movie-rate-dialog.component';
-import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {MatDialogModule} from "@angular/material/dialog";
 import {MatSliderModule} from "@angular/material/slider";
 import { MovieRateStarDisplayComponent } from './movie-rate-star-display/movie-rate-star-display.component';
 import {RouterModule} from "@angular/router";
@@ -55,8 +55,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
       {path: 'add-movie', component: MovieAddNewComponent},
       {path: 'main', component: MovieTableContainerComponent},
       {path: '', redirectTo: '/main', pathMatch: 'full'},
-
-    ]),
+    ],{ useHash: true }),
     MatSelectModule
   ],
   providers: [],
