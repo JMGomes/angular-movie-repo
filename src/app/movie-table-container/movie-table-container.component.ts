@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MovieStoreService} from "../../services/movie-store.service";
 import {Movie} from "../../model/Movie";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-movie-table-container',
@@ -11,7 +12,7 @@ export class MovieTableContainerComponent implements OnInit {
   movies: Movie[] = [];
   searchTerm: string = '';
 
-  constructor(private movieStore: MovieStoreService) { }
+  constructor(private movieStore: MovieStoreService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.movieStore.getMovies().subscribe(movies => this.movies = movies);
@@ -23,6 +24,7 @@ export class MovieTableContainerComponent implements OnInit {
 
   deleteMovieFromStore(m: Movie) {
     this.movieStore.removeMovie(m);
+    this._snackBar.open(`${m.name} Removed`);
   }
 
   updateMovieRatingFromStore(movieRate: {movie: Movie; rate: number}) {
