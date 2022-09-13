@@ -12,14 +12,17 @@ export class SearchMovieComponent implements OnInit {
   searchControl = new FormControl('', []);
   sub?: Subscription;
 
-  constructor() { }
-
   ngOnInit(): void {
     this.sub = this.searchControl.valueChanges
       .subscribe(
-      (term) => { if (term != null) this.termEvent.emit(term)}
+      (term) => { if (term != null) this.emit(term)}
     );
   }
+
+  emit(term: string) {
+    this.termEvent.emit(term);
+  }
+
 
   ngOnDestroy() {
     if(this.sub) {

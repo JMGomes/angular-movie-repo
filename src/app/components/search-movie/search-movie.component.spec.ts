@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchMovieComponent } from './search-movie.component';
+import {By} from "@angular/platform-browser";
 
 describe('SearchMovieComponent', () => {
   let component: SearchMovieComponent;

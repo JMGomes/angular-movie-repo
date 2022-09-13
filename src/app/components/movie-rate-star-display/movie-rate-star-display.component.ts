@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
-import {Movie} from "../../model/Movie";
+import {Movie} from "../../../model/Movie";
 
 @Component({
   selector: 'app-movie-rate-star-display',

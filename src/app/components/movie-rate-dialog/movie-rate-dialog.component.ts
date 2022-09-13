@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {Movie} from "../../model/Movie";
+import {Movie} from "../../../model/Movie";
 
 class MovieRateDialogData {
   movie: Movie;

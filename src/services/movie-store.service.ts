@@ -8,7 +8,6 @@ import {Injectable} from "@angular/core";
 })
 export class MovieStoreService {
   movies$ = new BehaviorSubject<Movie[]>([]);
-  term$ = new BehaviorSubject<string>('');
 
   constructor(private movieApiService: MovieApiService) {
     this.movieApiService.fetchAllMovies().subscribe(
@@ -46,11 +45,4 @@ export class MovieStoreService {
     this.movies$.next(movies);
   }
 
-  getTerm(): BehaviorSubject<string> {
-    return this.term$;
-  }
-
-  setTerm(): BehaviorSubject<string> {
-    return this.term$;
-  }
 }

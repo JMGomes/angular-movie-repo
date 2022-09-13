@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MovieApiService} from "../../services/api/movie-api.service";
-import {Movie} from "../../model/Movie";
+import {MovieApiService} from "../../../services/api/movie-api.service";
+import {Movie} from "../../../model/Movie";
 import {MovieRateDialogComponent} from "../movie-rate-dialog/movie-rate-dialog.component";
 import {MatDialog} from "@angular/material/dialog";
 

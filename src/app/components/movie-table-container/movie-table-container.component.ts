@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MovieStoreService} from "../../services/movie-store.service";
-import {Movie} from "../../model/Movie";
+import {MovieStoreService} from "../../../services/movie-store.service";
+import {Movie} from "../../../model/Movie";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
